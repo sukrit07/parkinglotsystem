@@ -1,9 +1,7 @@
 package com.sukrit.parkinglotsystem.builders;
 
 import com.sukrit.parkinglotsystem.dto.TicketDTO;
-import com.sukrit.parkinglotsystem.dto.UserDTO;
 import com.sukrit.parkinglotsystem.models.Ticket;
-import com.sukrit.parkinglotsystem.models.User;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass
@@ -12,6 +10,7 @@ public class TicketEntityDTOBuilder {
   public TicketDTO toDto(Ticket ticket){
     return TicketDTO.builder()
         .vehicleDTO(VehicleEntityDTOBuilder.toDto(ticket.getVehicle()))
+        .ticketId(ticket.getId())
         .startTime(ticket.getStartTime())
         .endTime(ticket.getEndTime())
         .amount(ticket.getAmount())

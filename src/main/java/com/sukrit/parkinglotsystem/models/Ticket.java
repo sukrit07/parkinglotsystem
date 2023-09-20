@@ -5,6 +5,7 @@ import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import java.util.Date;
 import java.util.List;
@@ -24,13 +25,13 @@ public class Ticket extends BaseModel{
   private Vehicle vehicle;
 
   @OneToOne
-  private User entryGateOperator;
+  private ParkingLotUser entryGateOperator;
 
   @OneToOne
-  private User exitGateOperator;
+  private ParkingLotUser exitGateOperator;
 
-  @OneToOne
-  private User user;
+  @ManyToOne
+  private ParkingLotUser user;
 
   private Date startTime;
   private Date endTime;

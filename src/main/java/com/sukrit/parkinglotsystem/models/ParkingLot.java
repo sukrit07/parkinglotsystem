@@ -26,7 +26,7 @@ public class ParkingLot extends BaseModel {
   @ManyToOne
   private City city;
 
-  @OneToMany(cascade = CascadeType.ALL)
+  @OneToMany(mappedBy = "parkingLot",cascade = CascadeType.ALL)
   private List<Gate> gates;
 
   @Enumerated(EnumType.ORDINAL)

@@ -1,7 +1,9 @@
 package com.sukrit.parkinglotsystem.models;
 
 public enum ParkingSpotStatus {
-    OPEN,
-    CLOSED
+    CLOSED,
+
+    AVAILABLE,
+    NOT_AVAILABLE
 
 }

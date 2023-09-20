@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TicketDTO {
 
+  private Long ticketId;
   private VehicleDTO vehicleDTO;
   private UserDTO userDTO;
   private Date startTime;
